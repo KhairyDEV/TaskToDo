@@ -1,10 +1,9 @@
-// taskobject.h
 #ifndef TASKOBJECT_H
 #define TASKOBJECT_H
 
 #include <string>
 
-using namespace std; // since you're using this across all files
+using namespace std;
 
 struct TaskObject
 {
@@ -13,4 +12,4 @@ struct TaskObject
     string prio;
 };
 
-#endif // TASKOBJECT_H
+#endif
