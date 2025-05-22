@@ -36,7 +36,6 @@ void Meow()
     cout << "Meow\n";
 }
 
-hareswed ana msh la2y el file
 
 
 map<int, Command> commands =
