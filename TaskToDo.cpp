@@ -1,19 +1,7 @@
 #include "TaskToDo.h"
-using namespace std;
-
-/*For all team-members*/
 
 
-//this is where all active tasks are stored, added, deleted, sorted, and all other operations that run on the taskobject are run on this list
 unordered_map<string, TaskObject> activeTasksList;
-
-
-/*End for all team-members*/
-
-//Kashta's (make sure code is compatible with menu (easy arguments))
-
-
-
 map<int, Command> commands =
 {
     //Adding goes like this {(function's number), (define a new Command)}
@@ -65,5 +53,3 @@ int main()
 
     return 0;
 }
-//End Kashta's
-
