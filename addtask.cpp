@@ -29,6 +29,11 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
     cout << "Due Date (DD-MM-YYYY): ";
     getline(cin, due);
 
+    if (due.length() != 10){
+        cout << "Invalid Date Format, Please fill the date correctly";
+        return;
+    }
+
     cout << "Priority (High/Medium/Low): ";
     getline(cin, prio);
 
