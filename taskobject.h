@@ -1,3 +1,5 @@
+// struct header
+
 #ifndef TASKOBJECT_H
 #define TASKOBJECT_H
 
