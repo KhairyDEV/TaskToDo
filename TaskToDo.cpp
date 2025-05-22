@@ -1,10 +1,4 @@
-#include <iostream>
-#include <map>
-#include <unordered_map>
-#include <functional>
-#include <string>
-#include "taskobject.h"
-#include "addtask.h"
+#include "TaskToDo.h"
 using namespace std;
 
 /*For all team-members*/
@@ -17,11 +11,6 @@ unordered_map<string, TaskObject> activeTasksList;
 /*End for all team-members*/
 
 //Kashta's (make sure code is compatible with menu (easy arguments))
-struct Command
-{
-    string name;
-    function<void()> function;
-};
 
 
 
