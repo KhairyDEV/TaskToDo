@@ -30,7 +30,7 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
     getline(cin, due);
 
     if (due.length() != 10){
-        cout << "Invalid Date Format, Please fill the date correctly";
+        cout << "Invalid Date Format, Please fill the date";
         return;
     }
 
