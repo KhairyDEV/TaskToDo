@@ -16,13 +16,18 @@ int main()
         string choiceString;
         int choice = 0;
         bool correctUserInput = true;
-        cout << "\n*****\n\n" << "Below are the possible choices, input the NUMBER of the task you want\n";
+        cout << "\n*****\n\n" << "Below are the possible choices, input the NUMBER of the task you want (Max of 9-numbers long input allowed).\n";
         for (auto command : commands)
         {
             cout << command.first << "." << command.second.name << endl;
         }
         cout << endl;
         cin >> choiceString;
+        if (choiceString.length() > 9)
+        {
+            cout << "\nPlease enter a number less than 999999999 (With 9 nines).\nYou inputted " << choiceString.length() << " characters.\n";
+            continue;
+        }
         for (char i : choiceString)
         {
             if (!isdigit(i))
