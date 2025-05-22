@@ -16,25 +16,12 @@ unordered_map<string, TaskObject> activeTasksList;
 
 /*End for all team-members*/
 
-// Salah's Part add tasks
 //Kashta's (make sure code is compatible with menu (easy arguments))
 struct Command
 {
     string name;
     function<void()> function;
 };
-/*
-(for future k, noone implement any of this.):
--make a vraiable that holds current tasklist in order to pass as argument (done)
--make delegates for each of team's function's (if they require arguments, if not, then just put the name)
--delete quirks like placeholder functions and comments such as this one
--add a tad bit of cool shi cuz why tf not (not sure wut constitutes as cool just yet) (task roullete XD)
-*/
-
-void Meow()
-{
-    cout << "Meow\n";
-}
 
 
 
