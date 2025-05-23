@@ -6,7 +6,7 @@ using namespace std;
 
 //shash, the comments are my own to remember the functionality of each section.
 
-void DeleteTask(unordered_map<string, TaskObject>& tasksList)
+void deletetask(unordered_map<string, TaskObject>& tasksList)
 {
     cout << "\n--- Delete Task ---\n";
 
