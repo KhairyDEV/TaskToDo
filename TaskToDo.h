@@ -6,6 +6,7 @@
 #include <string>
 #include "taskobject.h"
 #include "addtask.h"
+#include "deletetask.h"
 
 struct Command
 {
