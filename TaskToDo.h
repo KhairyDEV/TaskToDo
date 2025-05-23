@@ -7,7 +7,7 @@
 #include "taskobject.h"
 #include "addtask.h"
 #include "deletetask.h"
-
+#include "sortbypriority.h"
 struct Command
 {
     string name;
