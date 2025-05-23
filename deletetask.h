@@ -3,7 +3,8 @@
 
 #include <vector>
 #include "taskobject.h"
+#include <unordered_map>
 
-void deleteTask(std::vector<Task>& tasks, int taskId);
+void DeleteTask(unordered_map<string, TaskObject>& tasksList);
 
 #endif
