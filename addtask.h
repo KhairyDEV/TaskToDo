@@ -3,10 +3,9 @@
 #define ADDTASK_H
 
 #include <unordered_map>
+#include <string>
 #include "taskobject.h"
 
-using namespace std;
+void addtask(std::unordered_map<std::string, TaskObject>& tasksList);
 
-void addtask(unordered_map<string, TaskObject>& tasksList);
-
-#endif
+#endif // ADDTASK_H
