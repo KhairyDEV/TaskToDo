@@ -5,7 +5,7 @@
 
 using namespace std;
 
-string trim(const string& str) {
+string trimInput(const string& str) {
     size_t first = str.find_first_not_of(' ');
     size_t last = str.find_last_not_of(' ');
     return (first == string::npos) ? "" : str.substr(first, (last - first + 1));
@@ -18,6 +18,7 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
     cout << "\n--- Add New Task ---\n";
     cout << "Title: ";
     getline(cin >> ws, title);
+    title = trimInput(title); 
 
     if (tasksList.find(title) != tasksList.end()) {
         string confirm;
@@ -36,7 +37,6 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
     getline(cin, prio);
 
     string prioLcase = prio;
-    prioLcase = trim(prioLcase);
     transform(prioLcase.begin(), prioLcase.end(), prioLcase.begin(), ::tolower);
     if (prioLcase != "high" && prioLcase != "medium" && prioLcase != "low")
     {
