@@ -8,8 +8,7 @@
 #include <algorithm>
 #include "TaskObject.h" 
 using namespace std;
-void setDueDate(std::unordered_map<std::string, TaskObject>& tasks);
+void setDueDate(std::unordered_map<std::string, TaskObject>& tasksList);
 
 #endif
-
 
