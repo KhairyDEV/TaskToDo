@@ -1,6 +1,14 @@
 #include "searchfilter.h"
 #include <iostream>
+#include <algorithm> // For std::transform
 using namespace std;
+
+// Helper function to make strings lowercase
+string toLower(const string& s) {
+    string res = s;
+    transform(res.begin(), res.end(), res.begin(), ::tolower);
+    return res;
+}
 
 void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
     while (true) {
@@ -36,7 +44,8 @@ void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
             getline(cin, prio);
             int found = 0;
             for (const auto& p : tasksList) {
-                if (p.second.prio == prio) {
+                // Case-insensitive comparison
+                if (toLower(p.second.prio) == toLower(prio)) {  
                     cout << p.second.title
                         << " | Priority: " << p.second.prio
                         << " | Due: " << p.second.getDueString() << endl;
