@@ -1,15 +1,10 @@
-// task_due_date.h
-#ifndef TASKDUEDATE_H
-#define TASKDUEDATE_H
+#ifndef DELETETASK_H
+#define DELETETASK_H
 
-#include <iostream>
+#include <vector>
+#include "taskobject.h"
 #include <unordered_map>
-#include <string>
-#include <algorithm>
-#include "TaskObject.h" 
-using namespace std;
-void setDueDate(std::unordered_map<std::string, TaskObject>& tasksList);
+
+void DeleteTask(unordered_map<string, TaskObject>& tasksList);
 
 #endif
-
-
