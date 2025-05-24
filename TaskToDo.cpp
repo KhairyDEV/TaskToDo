@@ -1,6 +1,5 @@
 #include "TaskToDo.h"
 
-
 unordered_map<string, TaskObject> activeTasksList;
 map<int, Command> commands =
 {
@@ -13,7 +12,6 @@ map<int, Command> commands =
 };
 
 int main()
-
 {
     while (true)
     {

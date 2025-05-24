@@ -7,11 +7,11 @@ using namespace std;
 //For Mariam's code
 struct DueDate
 {
-    int year=2025;
     int month;
     int day;
     int hour;
     int minute;
+    int year=2025;
 };
 
 struct TaskObject
