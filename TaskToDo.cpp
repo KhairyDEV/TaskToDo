@@ -7,7 +7,7 @@ map<int, Command> commands =
     //Adding goes like this {(function's number), (define a new Command)}
     {1, Command{"Add Task", []() { addtask(activeTasksList); }}},
     {2, Command{"Delete Task", []() { DeleteTask(activeTasksList); }}},
-    {3, Command{" Sort Task", []() { sortbypriority(activeTasksList); }}},
+    //{3, Command{" Sort Task", []() { sortbypriority(activeTasksList); }}},
     {4, Command{"Search/Filter Tasks", []() { searchAndFilter(activeTasksList); }}}
 };
 
