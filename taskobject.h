@@ -11,7 +11,7 @@ struct TaskObject
 {
     string title;
     string prio;
-    string due_date;
+    string due;
     bool completed;
 };
 
