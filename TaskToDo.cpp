@@ -8,7 +8,9 @@ map<int, Command> commands =
     {2, Command{"Delete Task", []() { DeleteTask(activeTasksList); }}},
     {3, Command{"Sort Task", []() { sortbypriority(activeTasksList); }}},
     {4, Command{"Search/Filter Tasks", []() { searchAndFilter(activeTasksList); }}},
-    {5, Command{"Set due date for a task", []() {setDueDate(activeTasksList); }}}
+    {5, Command{"Set due date for a task", []() {setDueDate(activeTasksList); }}},
+    {6, Command{"Save Tasks", []() { saveTasksToFile("taskslist.txt", activeTasksList); }} },
+    {7, Command{"Load Tasks", []() { loadTasksFromFile("taskslist.txt", activeTasksList); }} }
 };
 
 int main()

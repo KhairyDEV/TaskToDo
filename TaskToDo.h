@@ -10,6 +10,7 @@
 #include "sortbypriority.h"
 #include "searchfilter.h"
 #include "duedate.h"
+#include "savewload.h"
 struct Command
 {
     string name;
