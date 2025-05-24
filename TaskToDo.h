@@ -9,6 +9,7 @@
 #include "deletetask.h"
 #include "sortbypriority.h"
 #include "searchfilter.h"
+#include "duedate.h"
 struct Command
 {
     string name;
