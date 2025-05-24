@@ -10,7 +10,6 @@ using namespace std;
 struct TaskObject
 {
     string title;
-    string due;
     string prio;
 };
 
