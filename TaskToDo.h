@@ -8,6 +8,7 @@
 #include "addtask.h"
 #include "deletetask.h"
 #include "sortbypriority.h"
+#include "searchfilter.h"
 struct Command
 {
     string name;
