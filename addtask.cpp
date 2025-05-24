@@ -5,6 +5,12 @@
 
 using namespace std;
 
+string trim(const string& str) {
+    size_t first = str.find_first_not_of(' ');
+    size_t last = str.find_last_not_of(' ');
+    return (first == string::npos) ? "" : str.substr(first, (last - first + 1));
+}
+
 void addtask(unordered_map<string, TaskObject>& tasksList)
 {
     string title, prio;
@@ -30,6 +36,7 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
     getline(cin, prio);
 
     string prioLcase = prio;
+    prioLcase = trim(prioLcase);
     transform(prioLcase.begin(), prioLcase.end(), prioLcase.begin(), ::tolower);
     if (prioLcase != "high" && prioLcase != "medium" && prioLcase != "low")
     {
