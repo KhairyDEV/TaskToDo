@@ -2,15 +2,11 @@
 #include <vector>
 #include <string>
 #include <ctime>
+#include "taskobject.h"
 
 using namespace std;
 
-// tzbeet 
-struct Task {
-    string name;
-    bool completed;#include "searchfilter.h"
-#include <iostream>
-using namespace std;
+unordered_map<string, TaskObject> activeTasksList;
 
 void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
     while (true) {
