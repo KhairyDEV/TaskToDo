@@ -4,6 +4,11 @@
 #include <string>
 using namespace std;
 
+string trim(const string& str) {
+    size_t first = str.find_first_not_of(' ');
+    size_t last = str.find_last_not_of(' ');
+    return (first == string::npos) ? "" : str.substr(first, (last - first + 1));
+}
 
 void DeleteTask(unordered_map<string, TaskObject>& tasksList)
 {
