@@ -1,5 +1,5 @@
 // DueDateSetter.cpp
-#include "DueDateSetter.h"
+#include "duedate.h"
 
 void setDueDate(std::unordered_map<std::string, TaskObject>& tasks) {
     std::string name;

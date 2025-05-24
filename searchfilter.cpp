@@ -24,7 +24,7 @@ void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
                 if (p.second.title.find(key) != string::npos) {
                     cout << p.second.title
                         << " | Priority: " << p.second.prio
-                        << " | Due: " << p.second.due << endl;
+                        << " | Due: " << p.second.getDueString() << endl;
                     found++;
                 }
             }
@@ -39,7 +39,7 @@ void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
                 if (p.second.prio == prio) {
                     cout << p.second.title
                         << " | Priority: " << p.second.prio
-                        << " | Due: " << p.second.due << endl;
+                        << " | Due: " << p.second.getDueString() << endl;
                     found++;
                 }
             }
@@ -51,10 +51,10 @@ void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
             getline(cin, today);
             int found = 0;
             for (const auto& p : tasksList) {
-                if (p.second.due < today) { // simple string comparison
+                if (p.second.getDueString() < today) { // simple string comparison
                     cout << p.second.title
                         << " | Priority: " << p.second.prio
-                        << " | Due: " << p.second.due << endl;
+                        << " | Due: " << p.second.getDueString() << endl;
                     found++;
                 }
             }
