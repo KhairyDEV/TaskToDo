@@ -1,7 +1,7 @@
 #include <algorithm>  // for transform
 #include <cctype>     // for tolower
 #include "duedate.h"
-void setDueDate(unordered_map<string, TaskObject>& tasks) {
+void setDueDate(unordered_map<string, TaskObject>& tasksList) {
     string name;
     cout << "Enter task name: ";
     getline(cin >> ws, name);
@@ -12,7 +12,7 @@ void setDueDate(unordered_map<string, TaskObject>& tasks) {
         [](unsigned char c) { return tolower(c); });
 
     // Find matching task (assumes tasks keys are also lowercase)
-    if (tasks.find(lowerName) == tasks.end()) {
+    if (tasksList.find(lowerName) == tasksList.end()) {
         cout << "Task not found.\n";
         return;
     }
@@ -27,6 +27,6 @@ void setDueDate(unordered_map<string, TaskObject>& tasks) {
     cout << "Enter minute (0-59): ";
     cin >> min;
 
-    tasks[lowerName].due = { d, m, h, min };
+    tasksList[lowerName].due = { d, m, h, min };
     cout << "Due date set.\n";
 }
