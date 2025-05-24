@@ -38,7 +38,7 @@ void searchAndFilter(const unordered_map<string, TaskObject>& tasksList) {
         }
         else if (choice == 2) {
             cout << "Enter priority (High/Medium/Low): ";
-            string prio;A
+            string prio;
             getline(cin, prio);
             int found = 0;
             for (const auto& p : tasksList) {
