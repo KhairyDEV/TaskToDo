@@ -7,7 +7,7 @@ using namespace std;
 
 void addtask(unordered_map<string, TaskObject>& tasksList)
 {
-    string title, due, prio;
+    string title, prio;
 
     cout << "\n--- Add New Task ---\n";
     cout << "Title: ";
@@ -26,14 +26,6 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
         return;
     }
 
-    cout << "Due Date (DD-MM-YYYY): ";
-    getline(cin, due);
-
-    if (due.length() != 10){
-        cout << "Invalid Date Format, Please fill the date";
-        return;
-    }
-
     cout << "Priority (High/Medium/Low): ";
     getline(cin, prio);
 
@@ -45,5 +37,5 @@ void addtask(unordered_map<string, TaskObject>& tasksList)
         prio = "Medium";
     }
 
-    tasksList[title] = TaskObject{ title, due, prio };
+    tasksList[title] = TaskObject{ title, prio };
 }
